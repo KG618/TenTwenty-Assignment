@@ -13,8 +13,9 @@ export const styles = StyleSheet.create({
     },
     innerContainer: {
         flexDirection: "row",
-        justifyContent: "space-between",
         alignItems: "center",
+        justifyContent: "space-between",
+
     },
     searchImage: {
 

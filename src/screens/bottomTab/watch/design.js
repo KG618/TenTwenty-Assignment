@@ -13,27 +13,22 @@ import { NavigationPath } from "../../../constant/navigationRoute";
 
 const Design = (props) => {
 
-    const navigation = useNavigation()
     const { upcomingMovieList } = useSelector((state) => state.watch);
-    const onPressItem = () => {
-        navigation.navigate(NavigationPath.MOVIEDETAILES)
-    }
 
     const renderItem = ({ item }) => {
-        console.log("render Item", item)
 
         return (
             <View style={{ margin: 10 }}>
                 {props.searchText.length > 0 ?
                     <SearchItem
                         item={item}
-                        onPress={onPressItem}
+                        onPress={props.onPressItem}
                     />
                     :
 
                     <WatchMovieListItem
                         item={item}
-                        onPress={onPressItem}
+                        onPress={props.onPressItem}
                     />
                 }
             </View>

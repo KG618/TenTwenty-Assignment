@@ -4,6 +4,7 @@ export const NavigationPath = {
     //home
     MAIN: "main",
     GETTICKETS: "getTickets",
-    MOVIEDETAILES: "movieDEtails"
+    MOVIEDETAILES: "movieDEtails",
+    TICKETPAYMENT: 'ticketPayment'
 
 }

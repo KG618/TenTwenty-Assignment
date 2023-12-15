@@ -72,7 +72,7 @@ const Header = (props) => {
                         <View style={[styles.innerContainer, { justifyContent: "flex-start" }]}>
 
                             <TouchableOpacity
-                                onPress={() => setisSearsh(true)}
+                                onPress={() => props.goBack()}
                             >
                                 <Image
                                     source={images.UP}
@@ -80,9 +80,9 @@ const Header = (props) => {
                                     resizeMode="contain"
                                 />
                             </TouchableOpacity>
-                            <View style={{ marginStart: WIDTH_BASE_RATIO(20), alignItems: "center" }}>
-                                <RegularText label={Strings.TheKing} fw={'500'} />
-                                <RegularText label={'In theaters december 22, 2021'} color={Colors.C61C3F2} fw={'500'} />
+                            <View style={{ marginStart: WIDTH_BASE_RATIO(30), alignItems: "center" }}>
+                                <RegularText label={props?.data?.title} fw={'500'} />
+                                <RegularText label={`In theaters ${props?.data?.release_date}`} color={Colors.C61C3F2} fw={'500'} />
                             </View>
                         </View>
                         :

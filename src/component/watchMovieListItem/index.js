@@ -9,14 +9,14 @@ import { Colors } from "../../constant/color";
 import { ImageBaseUrl } from "../../api/baseUrl";
 
 const WatchMovieListItem = (props) => {
-    console.log("item", props.item)
+
     const [isSearsh, setisSearsh] = useState(false)
 
     return (
 
         <TouchableOpacity
             style={styles.container}
-            onPress={() => props.onPress()}
+            onPress={() => props.onPress(props.item)}
         >
 
             <ImageBackground

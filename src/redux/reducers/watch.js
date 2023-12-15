@@ -1,6 +1,7 @@
-import { DATA_FAILED, DATA_LOADING, WATCH } from "../actions/types";
+import { DATA_FAILED, DATA_LOADING, MOVIE_DETAILS, WATCH } from "../actions/types";
 const initialState = {
-  upcomingMovieList: []
+  upcomingMovieList: [],
+  movieDetail: {}
 }
 
 export const watchReducer = (state = initialState, action) => {
@@ -27,6 +28,16 @@ export const watchReducer = (state = initialState, action) => {
       return {
         ...state,
         upcomingMovieList: action?.payload,
+        isLoading: false,
+        isSuccess: true,
+        isError: false,
+        errMsg: null,
+      };
+    case MOVIE_DETAILS:
+
+      return {
+        ...state,
+        movieDetail: action?.payload,
         isLoading: false,
         isSuccess: true,
         isError: false,

@@ -7,6 +7,8 @@ import { NavigationPath } from "../constant/navigationRoute";
 import { BottomTab } from "../screens/bottomTab";
 import GetTickets from "../screens/GetTickets";
 import MovieDetails from "../screens/movieDetials";
+import TicketItem from "../component/TicketItemView/TicketItem";
+import TicketPayment from "../screens/ticketPayment";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,7 @@ function AppStack() {
       <Stack.Screen name={NavigationPath.MAIN} component={BottomTab} />
       <Stack.Screen name={NavigationPath.GETTICKETS} component={GetTickets} />
       <Stack.Screen name={NavigationPath.MOVIEDETAILES} component={MovieDetails} />
+      <Stack.Screen name={NavigationPath.TICKETPAYMENT} component={TicketPayment} />
 
     </Stack.Navigator>
   );

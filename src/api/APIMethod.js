@@ -4,7 +4,6 @@ import { baseUrl } from "./baseUrl";
 
 export const PostMethod = async (endPoint, data, dispatch, type, fun, cb) => {
 
-
   let res
   await baseUrl
     .post(endPoint, data)
@@ -39,8 +38,11 @@ export const PostMethod = async (endPoint, data, dispatch, type, fun, cb) => {
   }
 };
 
-export const GetMethod = async (endPoint, dispatch, cb) => {
-
+export const GetMethod = async (endPoint, dispatch, key, cb) => {
+  if (key) {
+    endPoint = endPoint + '/' + key;
+  }
+  console.log("endPoint=>", endPoint)
 
   let res
   await baseUrl
@@ -58,8 +60,8 @@ export const GetMethod = async (endPoint, dispatch, cb) => {
   if (res) {
     try {
 
-      if (res?.data) {
-        let data = [...res?.data.results]
+      if (res) {
+        let data = res
 
         cb(data)
 
