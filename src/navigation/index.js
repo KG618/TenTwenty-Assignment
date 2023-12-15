@@ -5,6 +5,8 @@ import { useSelector } from "react-redux";
 import { NavigationPath } from "../constant/navigationRoute";
 
 import { BottomTab } from "../screens/bottomTab";
+import GetTickets from "../screens/GetTickets";
+import MovieDetails from "../screens/movieDetials";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +29,8 @@ function AppStack() {
       }}
     >
       <Stack.Screen name={NavigationPath.MAIN} component={BottomTab} />
+      <Stack.Screen name={NavigationPath.GETTICKETS} component={GetTickets} />
+      <Stack.Screen name={NavigationPath.MOVIEDETAILES} component={MovieDetails} />
 
     </Stack.Navigator>
   );

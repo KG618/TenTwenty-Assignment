@@ -17,7 +17,6 @@ import More from "./more";
 import images from "../../assets/images";
 
 export const BottomTab = () => {
-    //const backHandler = BackHandler.addEventListener('hardwareBackPress', () => true)
 
     const Tab = createBottomTabNavigator()
 
@@ -39,17 +38,14 @@ export const BottomTab = () => {
                         <>
                             <Text style={[styles.topTabBarLabel, {
                                 color: focused ?
-                                    Colors.primaryColor :
+                                    Colors.CFFFFFF :
 
-                                    Colors.borderColor
+                                    Colors.C827D88
                             }]}
                                 numberOfLines={1}
                                 adjustsFontSizeToFit={true}
                             >{Strings.DASHBOARD}</Text>
-                            <View style={[styles.line, {
-                                backgroundColor: focused ?
-                                    Colors.primaryColor : Colors.white
-                            }]} />
+
                         </>
                     ),// Labal
                     tabBarIcon: ({ focused }) => (
@@ -59,9 +55,9 @@ export const BottomTab = () => {
                             style={[styles.tabIconSty,
                             {
                                 tintColor: focused ?
-                                    Colors.primaryColor :
+                                    Colors.CFFFFFF :
 
-                                    Colors.borderColor
+                                    Colors.C827D88
                             }]}
                             resizeMode={"contain"}
                         />
@@ -86,17 +82,14 @@ export const BottomTab = () => {
                             <>
                                 <Text style={[styles.topTabBarLabel, {
                                     color: focused ?
-                                        Colors.primaryColor :
+                                        Colors.CFFFFFF :
 
-                                        Colors.black
+                                        Colors.C827D88
                                 }]}
                                     numberOfLines={1}
                                     adjustsFontSizeToFit={true}
                                 >{Strings.WATCH}</Text>
-                                <View style={[styles.line, {
-                                    backgroundColor: focused ?
-                                        Colors.primaryColor : Colors.white
-                                }]} />
+
                             </>
                         ), // Labal
                         tabBarIcon: ({ focused }) => (
@@ -106,9 +99,9 @@ export const BottomTab = () => {
                                 style={[styles.tabIconSty,
                                 {
                                     tintColor: focused ?
-                                        Colors.primaryColor :
+                                        Colors.CFFFFFF :
 
-                                        Colors.black
+                                        Colors.C827D88
                                 }]}
                                 resizeMode={"contain"}
                             />
@@ -133,18 +126,14 @@ export const BottomTab = () => {
                             <>
                                 <Text style={[styles.topTabBarLabel, {
                                     color: focused ?
-                                        Colors.primaryColor :
+                                        Colors.CFFFFFF :
 
-                                        Colors.black
+                                        Colors.C827D88
                                 }]}
                                     numberOfLines={1}
                                     adjustsFontSizeToFit={true}
                                 >{Strings.MEDIA}</Text>
-                                <View style={[styles.line, {
-                                    backgroundColor: focused ?
-                                        Colors.primaryColor
-                                        : Colors.white
-                                }]} />
+
                             </>
                         ),
                         tabBarIcon: ({ focused }) => (
@@ -153,10 +142,11 @@ export const BottomTab = () => {
                                 style={[styles.tabIconSty,
                                 {
 
-                                    tintColor: focused ?
-                                        Colors.primaryColor :
+                                    tintColor:
+                                        focused ?
+                                            Colors.CFFFFFF :
 
-                                        Colors.black
+                                            Colors.C827D88
                                 }]}
                                 resizeMode={"contain"}
                             />
@@ -184,29 +174,26 @@ export const BottomTab = () => {
                             <>
                                 <Text style={[styles.topTabBarLabel, {
                                     color: focused ?
-                                        Colors.primaryColor :
+                                        Colors.CFFFFFF :
 
-                                        Colors.black
+                                        Colors.C827D88
                                 }]}
                                     numberOfLines={1}
                                     adjustsFontSizeToFit={true}
                                 >{Strings.MORE}</Text>
-                                <View style={[styles.line, {
-                                    backgroundColor: focused ?
-                                        Colors.primaryColor : Colors.white
-                                }]} />
+
                             </>
                         ),
                         tabBarIcon: ({ focused }) => (
 
                             <Image
                                 source={images.MoreIcon}
-                                style={[styles.reTourIconStyle,
+                                style={[styles.tabIconSty,
                                 {
                                     tintColor: focused ?
-                                        Colors.primaryColor :
+                                        Colors.CFFFFFF :
 
-                                        Colors.black
+                                        Colors.C827D88
                                 }]}
                                 resizeMode={"contain"}
                             />
@@ -231,34 +218,25 @@ export const BottomTab = () => {
 
 const styles = StyleSheet.create({
     tabIconSty: {
-        height: HEIGHT_BASE_RATIO(70),
-        width: WIDTH_BASE_RATIO(70),
+        height: HEIGHT_BASE_RATIO(24),
+        width: WIDTH_BASE_RATIO(24),
         resizeMode: "contain"
 
     },
     tabBarSty: {
-        height: Platform.OS === 'ios' ? HEIGHT_BASE_RATIO(160) : HEIGHT_BASE_RATIO(132),
+        height: Platform.OS === 'ios' ? HEIGHT_BASE_RATIO(85) : HEIGHT_BASE_RATIO(75),
         justifyContent: "center",
         alignItems: "center",
         borderTopStartRadius: HEIGHT_BASE_RATIO(30),
         borderTopEndRadius: HEIGHT_BASE_RATIO(30),
-        borderWidth: 1,
-        borderColor: Colors.borderColor,
+        backgroundColor: Colors.C2E2739,
     },
-    reTourIconStyle: {
-        height: HEIGHT_BASE_RATIO(40),
-        width: WIDTH_BASE_RATIO(40),
-        resizeMode: "contain"
-    },
+
     topTabBarLabel: {
-        fontSize: HEIGHT_BASE_RATIO(16),
+        fontSize: HEIGHT_BASE_RATIO(10),
         color: Colors.black,
-        fontFamily: "Inter-Bold"
+        fontFamily: "Inter-Bold",
+        marginBottom: HEIGHT_BASE_RATIO(8)
     },
-    line: {
-        marginVertical: HEIGHT_BASE_RATIO(5),
-        height: HEIGHT_BASE_RATIO(5),
-        backgroundColor: Colors.primaryColor,
-        width: "80%"
-    }
+
 })

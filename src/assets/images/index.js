@@ -8,6 +8,8 @@ const PlayIcon = require("./playIcon.png");
 const Search = require("./Search.png");
 const UP = require("./UP.png");
 const Watch = require("./watch.png");
+const NoImage = require("./noImage.png");
+const ArcLine = require("./arcLine.png");
 
 export default Images = {
   Close,
@@ -18,5 +20,7 @@ export default Images = {
   PlayIcon,
   Search,
   Watch,
-  UP
+  UP,
+  NoImage,
+  ArcLine
 };

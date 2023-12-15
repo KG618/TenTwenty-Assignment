@@ -8,5 +8,9 @@ export const Colors = {
     CE26CA5: "#E26CA5",
     C564CA3: "#564CA3",
     CCD9D0F: "#CD9D0F",
+    CFFFFFF: "#FFFFFF",
+    C2E2739: "#2E2739",
+    C202C43: "#202C43",
+    CF2F2F6: "#F2F2F6"
 
 }

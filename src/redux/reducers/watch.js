@@ -1,9 +1,10 @@
 import { DATA_FAILED, DATA_LOADING, WATCH } from "../actions/types";
 const initialState = {
-  wupcomingMovieList: []
+  upcomingMovieList: []
 }
 
 export const watchReducer = (state = initialState, action) => {
+
   switch (action.type) {
     case DATA_LOADING:
       return {
@@ -22,9 +23,10 @@ export const watchReducer = (state = initialState, action) => {
         errMsg: action?.payload,
       };
     case WATCH:
+
       return {
         ...state,
-        wupcomingMovieList: action?.payload,
+        upcomingMovieList: action?.payload,
         isLoading: false,
         isSuccess: true,
         isError: false,

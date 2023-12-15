@@ -4,5 +4,7 @@ export const Strings = {
     MEDIA: "Media",
     MORE: 'More',
     CUiSINE: 'Cuisine',
+    searchPlaceholder: "TV shows, movies and more",
+    TheKing: "The King’s Man"
 
 }

@@ -11,7 +11,7 @@ baseUrl.interceptors.request.use(
         };
 
         config.params = { api_key: "171b8590dc351100b0f90316718834ac" }
-        // console.log("config header", config, userLang)
+
         return config;
     },
     function (error) {
@@ -24,5 +24,5 @@ baseUrl.interceptors.response.use(function (response) {
     }
     return response;
 });
-
+export const ImageBaseUrl = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
 export { baseUrl };
